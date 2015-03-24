@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2015-03-10 09:36:34
+  end: 2015-03-10 09:36:34
+  supervisor_id: 1
+  classroom_id: 1
+  exam_period_id: 1
+
+two:
+  start: 2015-03-10 09:36:34
+  end: 2015-03-10 09:36:34
+  supervisor_id: 1
+  classroom_id: 1
+  exam_period_id: 1

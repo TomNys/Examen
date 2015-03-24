@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Student Class Crossovers</h1>
+
+<table class="table table-striped table-bordered table-condensed table-hover table-responsive">
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Class</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_course_crossovers.each do |student_class_crossover| %>
+      <tr>
+        <td><%= student_class_crossover.student_crossover_id %></td>
+        <td><%= student_class_crossover.course_crossover1_id %></td>
+        <td><%= link_to 'Show', student_class_crossover %></td>
+        <td><%= link_to 'Edit', edit_student_class_crossover_path(student_class_crossover) %></td>
+        <td><%= link_to 'Destroy', student_class_crossover, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student class crossover', new_student_course_crossover_path %>

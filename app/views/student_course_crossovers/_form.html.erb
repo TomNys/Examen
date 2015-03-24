@@ -1,0 +1,25 @@
+<%= form_for(@student_course_crossover) do |f| %>
+  <% if @student_course_crossover.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student_course_crossover.errors.count, "error") %> prohibited this student_class_crossover from being saved:</h2>
+
+      <ul>
+      <% @student_course_crossover.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_crossover_id %><br>
+    <%= f.number_field :student_crossover_id %>
+  </div>
+  <div class="field">
+    <%= f.label :course_crossover1_id %><br>
+    <%= f.number_field :course_crossover1_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
